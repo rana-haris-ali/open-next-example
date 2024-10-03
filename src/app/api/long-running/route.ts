@@ -1,6 +1,4 @@
-import { NextApiRequest } from "next";
-
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
 	const url = new URL(req.url ?? '')
 	// Simulate a long-running task
 	await new Promise((resolve) => setTimeout(resolve, parseInt(url.searchParams.get('time') ?? '3000'))); // Wait for 5 seconds

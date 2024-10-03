@@ -1,6 +1,4 @@
-import { NextApiRequest } from "next";
-
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
 	// Quickly return a response to the client
 	const data = { message: "Task has been started." };
 	const url = new URL(req.url ?? '')
